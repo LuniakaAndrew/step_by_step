@@ -19,4 +19,19 @@ angular.module 'articleApp', ['ui.router', 'ngRoute', 'ui.bootstrap', 'ngAnimate
         url: '/index',
         templateUrl: "app/main/index.html"
 
+      .state 'admin',
+        url: '/admin',
+        templateUrl: 'app/main/admin.html',
+        controller: 'adminCtrl'
+
+      .state 'cabinet',
+        url: '/cabinet',
+        templateUrl: 'app/main/cabinet.html',
+        controller: 'cabinetCtrl'
+
+      .state 'cabinet.bookInfo',
+        url: '/book{id}',
+        templateUrl: 'app/main/bookInfo.html',
+        controller: 'bookInfoCtrl'
+
   ]
